@@ -306,6 +306,7 @@ iface {{ .Name }} inet static
     address {{ .Address }}
     network {{ .Network }}
     netmask {{ .Netmask }}
+		mtu 1400
 {{ if .IsDefaultForGateway }}    broadcast {{ .Broadcast }}
     gateway {{ .Gateway }}{{ end }}{{ end }}
 {{ if .DNSServers }}
